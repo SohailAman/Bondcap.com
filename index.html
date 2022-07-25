@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html data-html-server-rendered="true" lang="en">
-
-<head>
+  <head>
     <title>BOND</title>
-    <link data-vue-tag="ssr" rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/static/logo.ac8d93a.81520078ce993acfd7a8244208d5837a.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-</head>
+    <link
+      data-vue-tag="ssr"
+      rel="icon"
+      type="image/svg+xml"
+      sizes="32x32"
+      href="./assets/static/logo.ac8d93a.81520078ce993acfd7a8244208d5837a.svg"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="app" class="layout">
-        <a class="logo mobile opacity-0" id="scrolLogo">
-            <svg viewBox="0 0 49 48" xmlns="http://www.w3.org/2000/svg" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+      <a class="logo mobile opacity-0" id="scrolLogo">
+        <svg
+          viewBox="0 0 49 48"
+          xmlns="http://www.w3.org/2000/svg"
+          svg-inline=""
+          role="presentation"
+          focusable="false"
+          tabindex="-1"
+        >
           <path
             d="M2.783 12.482C.928 15.969 0 19.808 0 24c0 4.194.928 8.033 2.783 11.519 1.855 3.487 4.403 6.331 7.645 8.534 3.24 2.204 6.886 3.52 10.938 3.947v-1.604c-4.18-1.027-7.208-3.53-9.083-7.508C10.406 34.909 9.468 29.947 9.468 24c0-5.946.938-10.91 2.815-14.888 1.875-3.979 4.903-6.481 9.083-7.508V0c-4.052.428-7.699 1.744-10.938 3.947-3.242 2.204-5.79 5.048-7.645 8.535zm35.79-8.535C35.331 1.744 31.685.428 27.634 0v1.604c4.178 1.027 7.206 3.53 9.082 7.508 1.877 3.979 2.815 8.942 2.815 14.888 0 5.947-.938 10.91-2.815 14.888-1.876 3.978-4.904 6.481-9.082 7.508V48c4.05-.428 7.697-1.743 10.937-3.947 3.241-2.203 5.79-5.047 7.645-8.534C48.072 32.033 49 28.194 49 24c0-4.192-.928-8.031-2.783-11.518s-4.404-6.331-7.645-8.535z"
             fill-rule="evenodd"
             fill="#111"
           ></path>
         </svg>
-        </a>
-        <!-- fullpage_wraper -->
-        <div class="swiper mySwiper">
-            <div class="fullpage-wrapper swiper-wrapper" style="height: 100vh; position: relative; transition: all 0ms ease 0s">
-                <!-- Seperate Section -->
-                <div id="home" class="section swiper-slide slide slide-landing fp-section fp-slide fp-table" style="--slideIndex: 100; height: 100vh; z-index: 1" data-fp-styles="--slideIndex:100;">
-                    <div class="fp-tableCell" style="height: 100vh">
-                        <div class="slide-content">
-                            <div>
-                                <svg class="brand" viewBox="0 0 297 72" xmlns="http://www.w3.org/2000/svg" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+      </a>
+      <!-- fullpage_wraper -->
+      <div class="swiper mySwiper">
+        <div
+          class="fullpage-wrapper swiper-wrapper"
+          style="height: 100vh; position: relative; transition: all 0ms ease 0s"
+        >
+          <!-- Seperate Section -->
+          <div
+            id="home"
+            class="section swiper-slide slide slide-landing fp-section fp-slide fp-table"
+            style="--slideIndex: 100; height: 100vh; z-index: 1"
+            data-fp-styles="--slideIndex:100;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <div class="slide-content">
+                <div>
+                  <svg
+                    class="brand"
+                    viewBox="0 0 297 72"
+                    xmlns="http://www.w3.org/2000/svg"
+                    svg-inline=""
+                    role="presentation"
+                    focusable="false"
+                    tabindex="-1"
+                  >
                     <path
                       d="M75.128 18.722C72.33 23.953 70.931 29.712 70.931 36c0 6.29 1.4 12.049 4.197 17.278 2.798 5.231 6.641 9.498 11.531 12.802 4.887 3.305 10.387 5.278 16.5 5.92v-2.407c-6.306-1.54-10.873-5.294-13.702-11.261-2.83-5.968-4.246-13.412-4.246-22.332 0-8.919 1.415-16.364 4.246-22.332 2.829-5.968 7.396-9.722 13.701-11.261V0C97.046.642 91.546 2.615 86.66 5.92c-4.89 3.306-8.733 7.572-11.53 12.802zm122.49-14.776h2.412c.707 0 1.656.42 2.847 1.252a13.63 13.63 0 013.088 2.984c.868 1.155 1.302 2.151 1.302 2.984v33.882h-.482L171.18 1.06h-19.587v2.887h1.448c.641 0 1.462.42 2.46 1.252.996.834 1.882 1.83 2.653 2.984.772 1.155 1.158 2.151 1.158 2.984v50.823c0 .707-.386 1.557-1.158 2.552a13.474 13.474 0 01-2.653 2.598c-.998.739-1.819 1.107-2.46 1.107h-1.448v2.888h21.71v-2.888h-2.412c-.71 0-1.658-.416-2.847-1.251a13.542 13.542 0 01-3.088-2.984c-.868-1.156-1.302-2.15-1.302-2.984V13.572h.482l46.99 58.235h.483V11.166c0-.833.433-1.83 1.301-2.984A13.577 13.577 0 01216 5.198c1.189-.833 2.137-1.252 2.845-1.252h1.448V1.06h-22.675v2.887zm79.94 55.204c-3.7 6.064-9.214 9.096-16.548 9.096h-9.84v-64.3h9.454c4.953 0 9.118 1.43 12.496 4.284 3.377 2.856 5.885 6.706 7.526 11.55 1.639 4.847 2.46 10.285 2.46 16.317 0 9.304-1.85 16.989-5.549 23.053zm14.328-41.39c-3.41-5.295-7.832-9.4-13.267-12.321-5.436-2.92-11.112-4.38-17.03-4.38H229.94v2.887h1.447c.642 0 1.463.37 2.461 1.107.996.74 1.88 1.606 2.654 2.6.772.995 1.158 1.845 1.158 2.551v51.785c0 .707-.386 1.557-1.158 2.552a13.534 13.534 0 01-2.654 2.598c-.998.739-1.819 1.107-2.461 1.107h-1.447v2.888h32.034c6.045 0 11.755-1.54 17.127-4.62 5.37-3.08 9.696-7.317 12.977-12.707C295.36 48.417 297 42.45 297 35.904c0-6.802-1.705-12.85-5.114-18.144zM129.112 5.92C124.224 2.616 118.724.643 112.614 0v2.407c6.303 1.54 10.87 5.293 13.7 11.261 2.83 5.968 4.246 13.413 4.246 22.332 0 8.92-1.416 16.364-4.246 22.332-2.83 5.967-7.397 9.722-13.7 11.261V72c6.11-.642 11.61-2.615 16.498-5.92 4.889-3.304 8.733-7.57 11.531-12.802 2.798-5.23 4.198-10.988 4.198-17.278 0-6.287-1.4-12.047-4.198-17.278-2.798-5.23-6.642-9.496-11.53-12.801zm-86.61 57.994c-2.927 2.888-6.964 4.332-12.11 4.332h-9.165V35.904h10.42c4.695 0 8.41 1.38 11.145 4.139 2.733 2.76 4.1 6.642 4.1 11.647 0 5.263-1.463 9.337-4.39 12.224zM21.227 3.946h8.49c3.923 0 7.124 1.396 9.601 4.188 2.477 2.791 3.715 6.4 3.715 10.83 0 4.235-.933 7.475-2.798 9.72-1.867 2.248-4.954 3.692-9.263 4.332h-9.745V3.946zM54.853 39.37c-3.7-2.758-8.443-4.587-14.232-5.486V33.4c4.566-1.025 8.2-2.855 10.903-5.486 2.702-2.63 4.053-5.968 4.053-10.012 0-5.582-2.398-9.784-7.19-12.609C43.596 2.471 37.438 1.06 29.91 1.06H0v2.887h1.447c.642 0 1.462.37 2.46 1.107.997.74 1.882 1.606 2.653 2.6.772.995 1.159 1.845 1.159 2.551v51.785c0 .707-.387 1.557-1.159 2.552a13.474 13.474 0 01-2.653 2.598c-.998.739-1.818 1.107-2.46 1.107H0v2.888h30.49c9.132 0 16.402-1.732 21.805-5.198 5.404-3.465 8.106-8.278 8.106-14.439 0-5.325-1.85-9.368-5.548-12.128z"
                       fill="#000"
                       fill-rule="evenodd"
                     ></path>
                   </svg>
-                            </div>
-                        </div>
-                        <a class="swiper-button-next footer footer-landing" href="#scnd">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+                </div>
+              </div>
+              <a class="swiper-button-next footer footer-landing" href="#scnd">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 14"
+                  width="50"
+                  height="14"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M0 1l25 11L49 1"
                     stroke-width="1.5"
@@ -45,31 +85,53 @@
                     stroke="#000"
                   ></path>
                 </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Seperate Section -->
-                <div id="second" class="section swiper-slide slide slide-statement slide-bond fp-section fp-slide fp-table" style="--slideIndex: 1; height: 100vh" data-fp-styles="--slideIndex:1;">
-                    <div class="fp-tableCell" id="scnd" style="height: 100vh">
-                        <!---->
-                        <a class="logo mobile opacity-0" id="scrolLogo">
-                            <svg viewBox="0 0 49 48" xmlns="http://www.w3.org/2000/svg" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+              </a>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            id="second"
+            class="section swiper-slide slide slide-statement slide-bond fp-section fp-slide fp-table"
+            style="--slideIndex: 1; height: 100vh"
+            data-fp-styles="--slideIndex:1;"
+          >
+            <div class="fp-tableCell" id="scnd" style="height: 100vh">
+              <!---->
+              <a class="logo mobile opacity-0" id="scrolLogo">
+                <svg
+                  viewBox="0 0 49 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M2.783 12.482C.928 15.969 0 19.808 0 24c0 4.194.928 8.033 2.783 11.519 1.855 3.487 4.403 6.331 7.645 8.534 3.24 2.204 6.886 3.52 10.938 3.947v-1.604c-4.18-1.027-7.208-3.53-9.083-7.508C10.406 34.909 9.468 29.947 9.468 24c0-5.946.938-10.91 2.815-14.888 1.875-3.979 4.903-6.481 9.083-7.508V0c-4.052.428-7.699 1.744-10.938 3.947-3.242 2.204-5.79 5.048-7.645 8.535zm35.79-8.535C35.331 1.744 31.685.428 27.634 0v1.604c4.178 1.027 7.206 3.53 9.082 7.508 1.877 3.979 2.815 8.942 2.815 14.888 0 5.947-.938 10.91-2.815 14.888-1.876 3.978-4.904 6.481-9.082 7.508V48c4.05-.428 7.697-1.743 10.937-3.947 3.241-2.203 5.79-5.047 7.645-8.534C48.072 32.033 49 28.194 49 24c0-4.192-.928-8.031-2.783-11.518s-4.404-6.331-7.645-8.535z"
                     fill-rule="evenodd"
                     fill="#111"
                   ></path>
                 </svg>
-                        </a>
-                        <div class="slide-content">
-                            <div>
-                                <p>
-                                    A bond with iconic companies<br /> that shape our future
-                                </p>
-                            </div>
-                        </div>
-                        <a class="swiper-button-next footer footer-bond" href="#thrd">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+              </a>
+              <div class="slide-content">
+                <div>
+                  <p>
+                    A bond with iconic companies<br />
+                    that shape our future
+                  </p>
+                </div>
+              </div>
+              <a class="swiper-button-next footer footer-bond" href="#thrd">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 14"
+                  width="50"
+                  height="14"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M0 1l25 11L49 1"
                     stroke-width="1.5"
@@ -77,26 +139,41 @@
                     stroke="#000"
                   ></path>
                 </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Seperate Section -->
-                <div class="section swiper-slide slide slide-investments fp-section fp-slide fp-table" style="--slideIndex: 2; height: 100vh" data-fp-styles="--slideIndex:2;">
-                    <div class="fp-tableCell" style="height: 100vh">
-                        <div class="fp-scrollable" style="height: 100vh">
-                            <div class="fp-scroller" style="
+              </a>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            class="section swiper-slide slide slide-investments fp-section fp-slide fp-table"
+            style="--slideIndex: 2; height: 100vh"
+            data-fp-styles="--slideIndex:2;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <div class="fp-scrollable" style="height: 100vh">
+                <div
+                  class="fp-scroller"
+                  style="
                     transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
                     transition-duration: 0ms;
                     transform: translate(0px, 0px) translateZ(0px);
-                  ">
-                                <!---->
-                                <div class="slide-content" id="thrd">
-                                    <h2 class="title-page">Our Investments</h2>
-                                    <div>
-                                        <div id="investment-scroll-wrapper" class="vertical-scroll-wrapper" style="height: auto">
-                                            <ul id="investment-scroll__list my-4" class="vertical-scroll">
-                                                <li>
-                                                    <a target="_blank" href="//airbnb.com/"><svg
+                  "
+                >
+                  <!---->
+                  <div class="slide-content" id="thrd">
+                    <h2 class="title-page">Our Investments</h2>
+                    <div>
+                      <div
+                        id="investment-scroll-wrapper"
+                        class="vertical-scroll-wrapper"
+                        style="height: auto"
+                      >
+                        <ul
+                          id="investment-scroll__list my-4"
+                          class="vertical-scroll"
+                        >
+                          <li>
+                            <a target="_blank" href="//airbnb.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -125,9 +202,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//brex.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//brex.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -159,9 +237,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.browserstack.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.browserstack.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -295,9 +374,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//byjus.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//byjus.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -326,9 +406,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.canva.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.canva.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -357,9 +438,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//checkr.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//checkr.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -388,9 +470,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.cockroachlabs.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.cockroachlabs.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -471,9 +554,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//collectivemedical.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//collectivemedical.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -514,9 +598,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.dapperlabs.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.dapperlabs.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -545,9 +630,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//dlocal.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//dlocal.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -580,9 +666,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//docusign.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//docusign.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -611,9 +698,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.duolingo.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.duolingo.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -642,9 +730,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.epicgames.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.epicgames.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -672,9 +761,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//facebook.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//facebook.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -730,9 +820,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//ftx.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//ftx.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -801,9 +892,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//instacart.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//instacart.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -831,9 +923,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.intercom.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.intercom.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -861,9 +954,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//ironcladapp.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//ironcladapp.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -892,9 +986,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//jd.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//jd.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -949,9 +1044,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.kavak.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.kavak.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -980,9 +1076,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.legalzoom.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.legalzoom.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1025,9 +1122,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//nextdoor.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//nextdoor.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1055,9 +1153,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.on-running.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.on-running.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1086,9 +1185,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.onepeloton.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.onepeloton.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1117,9 +1217,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//withpersona.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//withpersona.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1172,9 +1273,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//pinterest.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//pinterest.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1203,9 +1305,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//plaid.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//plaid.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1234,9 +1337,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.postman.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.postman.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1317,9 +1421,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.relativityspace.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.relativityspace.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1351,9 +1456,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//retool.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//retool.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1414,9 +1520,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.revolut.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.revolut.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1445,9 +1552,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//ring.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//ring.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1475,9 +1583,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//robinhood.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//robinhood.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1558,9 +1667,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//sentry.io/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//sentry.io/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1589,9 +1699,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//www.snap.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//www.snap.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1620,9 +1731,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//spotify.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//spotify.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1651,9 +1763,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//square.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//square.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1681,9 +1794,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//stripe.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//stripe.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1711,9 +1825,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//toss.im/en/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//toss.im/en/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1742,9 +1857,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//trendyol.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//trendyol.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1773,9 +1889,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//uber.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//uber.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1804,9 +1921,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//uipath.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//uipath.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1835,9 +1953,10 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//waze.com/"><svg
+                          </li>
+                          <li>
+                            <a target="_blank" href="//waze.com/"
+                              ><svg
                                 width="346px"
                                 height="87px"
                                 viewBox="0 0 346 87"
@@ -1866,11 +1985,18 @@
                                 </g>
                               </svg>
                             </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="//yugalabs.io/">
-                                                        <!--?xml version="1.0" encoding="UTF-8"?-->
-                                                        <svg width="346px" height="87px" viewBox="0 0 346 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          </li>
+                          <li>
+                            <a target="_blank" href="//yugalabs.io/">
+                              <!--?xml version="1.0" encoding="UTF-8"?-->
+                              <svg
+                                width="346px"
+                                height="87px"
+                                viewBox="0 0 346 87"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
                                 <title>yugalabs</title>
                                 <g
                                   id="yugalabs"
@@ -1891,16 +2017,28 @@
                                   </g>
                                 </g>
                               </svg>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p><a href="/investments">View All</a></p>
-                                    <p style="margin-bottom: 10vh">&nbsp;</p>
-                                </div>
-                                <a class="swiper-button-next footer footer-investments" href="#forth">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p><a href="/investments">View All</a></p>
+                    <p style="margin-bottom: 10vh">&nbsp;</p>
+                  </div>
+                  <a
+                    class="swiper-button-next footer footer-investments"
+                    href="#forth"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 50 14"
+                      width="50"
+                      height="14"
+                      svg-inline=""
+                      role="presentation"
+                      focusable="false"
+                      tabindex="-1"
+                    >
                       <path
                         d="M0 1l25 11L49 1"
                         stroke-width="1.5"
@@ -1908,24 +2046,39 @@
                         stroke="#000"
                       ></path>
                     </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                  </a>
                 </div>
-                <!-- Seperate Section -->
-                <div id="forth" class="section swiper-slide slide slide-statement slide-trends fp-section fp-slide fp-table" style="--slideIndex: 3; height: 100vh" data-fp-styles="--slideIndex:3;">
-                    <div class="fp-tableCell" style="height: 100vh">
-                        <!---->
-                        <div class="slide-content">
-                            <div>
-                                <p>
-                                    Identifying global trends<br /> that drive innovation and change
-                                </p>
-                            </div>
-                        </div>
-                        <a class="swiper-button-next footer footer-trends" href="#fifth">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+              </div>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            id="forth"
+            class="section swiper-slide slide slide-statement slide-trends fp-section fp-slide fp-table"
+            style="--slideIndex: 3; height: 100vh"
+            data-fp-styles="--slideIndex:3;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <!---->
+              <div class="slide-content">
+                <div>
+                  <p>
+                    Identifying global trends<br />
+                    that drive innovation and change
+                  </p>
+                </div>
+              </div>
+              <a class="swiper-button-next footer footer-trends" href="#fifth">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 14"
+                  width="50"
+                  height="14"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M0 1l25 11L49 1"
                     stroke-width="1.5"
@@ -1933,35 +2086,55 @@
                     stroke="#000"
                   ></path>
                 </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Seperate Section -->
-                <div class="section swiper-slide slide slide-reports slide-internettrends fp-section fp-slide fp-table" style="--slideIndex: 4; height: 100vh" data-fp-styles="--slideIndex:4;">
-                    <div class="fp-tableCell" style="height: 100vh">
-                        <div class="fp-scrollable" style="height: 100vh">
-                            <div id="fifth" class="fp-scroller" style="
+              </a>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            class="section swiper-slide slide slide-reports slide-internettrends fp-section fp-slide fp-table"
+            style="--slideIndex: 4; height: 100vh"
+            data-fp-styles="--slideIndex:4;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <div class="fp-scrollable" style="height: 100vh">
+                <div
+                  id="fifth"
+                  class="fp-scroller"
+                  style="
                     transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
                     transition-duration: 0ms;
                     transform: translate(0px, 0px) translateZ(0px);
-                  ">
-                                <!---->
-                                <div class="slide-content">
-                                    <div>
-                                        <h2 class="title-section internet-trends">
-                                            Internet Trends
-                                        </h2>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Hi! Know About Our Latest Trends</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!---->
-                                    <p style="margin-bottom: 10vh">&nbsp;</p>
-                                </div>
-                                <a class="swiper-button-next footer footer-internettrends" href="#six">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+                  "
+                >
+                  <!---->
+                  <div class="slide-content">
+                    <div>
+                      <h2 class="title-section internet-trends">
+                        Internet Trends
+                      </h2>
+                      <ul>
+                        <li>
+                          <a href="#">Hi! Know About Our Latest Trends</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!---->
+                    <p style="margin-bottom: 10vh">&nbsp;</p>
+                  </div>
+                  <a
+                    class="swiper-button-next footer footer-internettrends"
+                    href="#six"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 50 14"
+                      width="50"
+                      height="14"
+                      svg-inline=""
+                      role="presentation"
+                      focusable="false"
+                      tabindex="-1"
+                    >
                       <path
                         d="M0 1l25 11L49 1"
                         stroke-width="1.5"
@@ -1969,9 +2142,11 @@
                         stroke="#000"
                       ></path>
                     </svg>
-                                </a>
-                            </div>
-                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="
+                  </a>
+                </div>
+                <div
+                  class="iScrollVerticalScrollbar iScrollLoneScrollbar"
+                  style="
                     position: absolute;
                     z-index: 9999;
                     width: 7px;
@@ -1979,8 +2154,11 @@
                     top: 2px;
                     right: 1px;
                     overflow: hidden;
-                  ">
-                                <div class="iScrollIndicator" style="
+                  "
+                >
+                  <div
+                    class="iScrollIndicator"
+                    style="
                       box-sizing: border-box;
                       position: absolute;
                       background: rgba(0, 0, 0, 0.5);
@@ -1997,22 +2175,28 @@
                         0.1,
                         1
                       );
-                    "></div>
-                            </div>
-                        </div>
-                    </div>
+                    "
+                  ></div>
                 </div>
-                <!-- Seperate Section -->
-                <div class="section swiper-slide slide slide-reports slide-specialreports fp-section fp-slide fp-table" style="--slideIndex: 5; height: 100vh" data-fp-styles="--slideIndex:5;">
-                    <div class="fp-tableCell" style="height: 100vh">
-                        <!---->
-                        <div class="slide-content">
-                            <!---->
-                            <div>
-                                <h2 class="title-section special-reports">Special Reports</h2>
-                                <ul>
-                                    <li class="reports-special">
-                                        <a href="/reports/onw?return=specialreports">Our New World (Apr ’20)</a
+              </div>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            class="section swiper-slide slide slide-reports slide-specialreports fp-section fp-slide fp-table"
+            style="--slideIndex: 5; height: 100vh"
+            data-fp-styles="--slideIndex:5;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <!---->
+              <div class="slide-content">
+                <!---->
+                <div>
+                  <h2 class="title-section special-reports">Special Reports</h2>
+                  <ul>
+                    <li class="reports-special">
+                      <a href="/reports/onw?return=specialreports"
+                        >Our New World (Apr ’20)</a
                       >
                     </li>
                     <li class="reports-special">
@@ -2043,21 +2227,39 @@
                   ></path>
                 </svg>
               </a>
-                            </div>
-                        </div>
-                        <!-- Seperate Section -->
-                        <div id="six" class="section swiper-slide slide slide-statement slide-partnership fp-section fp-slide fp-table" style="--slideIndex: 6; height: 100vh" data-fp-styles="--slideIndex:6;">
-                            <div class="fp-tableCell" style="height: 100vh">
-                                <!---->
-                                <div class="slide-content">
-                                    <div>
-                                        <p>
-                                            Trusted partnership<br /> supporting visionary founders
-                                        </p>
-                                    </div>
-                                </div>
-                                <a class="swiper-button-next footer footer-partnership" href="#seve">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            id="six"
+            class="section swiper-slide slide slide-statement slide-partnership fp-section fp-slide fp-table"
+            style="--slideIndex: 6; height: 100vh"
+            data-fp-styles="--slideIndex:6;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <!---->
+              <div class="slide-content">
+                <div>
+                  <p>
+                    Trusted partnership<br />
+                    supporting visionary founders
+                  </p>
+                </div>
+              </div>
+              <a
+                class="swiper-button-next footer footer-partnership"
+                href="#seve"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 14"
+                  width="50"
+                  height="14"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M0 1l25 11L49 1"
                     stroke-width="1.5"
@@ -2065,83 +2267,110 @@
                     stroke="#000"
                   ></path>
                 </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Seperate Section -->
-                        <div class="section swiper-slide slide slide-partners fp-section fp-slide fp-table active fp-completely" style="--slideIndex: 7; height: 100vh; z-index: 2" data-fp-styles="--slideIndex:7;">
-                            <div class="fp-tableCell" id="seve" style="height: 100vh">
-                                <!---->
-                                <div class="slide-content">
-                                    <h2 class="title-section">Partners</h2>
-                                    <ul class="">
-                                        <li>
-                                            <a href="/partners/daegwon-chae">
-                                                <div style="
+              </a>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            class="section swiper-slide slide slide-partners fp-section fp-slide fp-table active fp-completely"
+            style="--slideIndex: 7; height: 100vh; z-index: 2"
+            data-fp-styles="--slideIndex:7;"
+          >
+            <div class="fp-tableCell" id="seve" style="height: 100vh">
+              <!---->
+              <div class="slide-content">
+                <h2 class="title-section">Partners</h2>
+                <ul class="">
+                  <li>
+                    <a href="/partners/daegwon-chae">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/daegwon_chae.png');
-                        ">
-                                                    <p><span>Daegwon Chae</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/juliet-de-baubigny">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Daegwon Chae</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/juliet-de-baubigny">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/juliet_de_baubigny.png');
-                        ">
-                                                    <p><span>Juliet de Baubigny</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/noah-knauf">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Juliet de Baubigny</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/noah-knauf">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/noah_knauf.png');
-                        ">
-                                                    <p><span>Noah Knauf</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/mary-meeker">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Noah Knauf</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/mary-meeker">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/mary_meeker.png');
-                        ">
-                                                    <p><span>Mary Meeker</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/mood-rowghani">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Mary Meeker</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/mood-rowghani">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/mood_rowghani.png');
-                        ">
-                                                    <p><span>Mood Rowghani</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/jay-simons">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Mood Rowghani</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/jay-simons">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/jay_simons.png');
-                        ">
-                                                    <p><span>Jay Simons</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/partners/paul-vronsky">
-                                                <div style="
+                        "
+                      >
+                        <p><span>Jay Simons</span></p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/partners/paul-vronsky">
+                      <div
+                        style="
                           background-image: url('/assets/img/partners/directory/paul_vronsky.png');
-                        ">
-                                                    <p><span>Paul Vronsky</span></p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a class="swiper-button-next footer footer-partners" href="#eig">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 14" width="50" height="14" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+                        "
+                      >
+                        <p><span>Paul Vronsky</span></p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a class="swiper-button-next footer footer-partners" href="#eig">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 14"
+                  width="50"
+                  height="14"
+                  svg-inline=""
+                  role="presentation"
+                  focusable="false"
+                  tabindex="-1"
+                >
                   <path
                     d="M0 1l25 11L49 1"
                     stroke-width="1.5"
@@ -2149,27 +2378,42 @@
                     stroke="#000"
                   ></path>
                 </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Seperate Section -->
-                        <div class="section swiper-slide slide slide-closing slide-contact fp-section fp-slide fp-table" style="--slideIndex: 100; height: 100vh" data-fp-styles="--slideIndex:100;">
-                            <div class="fp-tableCell" style="height: 100vh">
-                                <!---->
-                                <div class="slide-content" id="eig">
-                                    <div class="logotype contact-logotype">
-                                        <svg viewBox="0 0 297 72" xmlns="http://www.w3.org/2000/svg" svg-inline="" role="presentation" focusable="false" tabindex="-1">
+              </a>
+            </div>
+          </div>
+          <!-- Seperate Section -->
+          <div
+            class="section swiper-slide slide slide-closing slide-contact fp-section fp-slide fp-table"
+            style="--slideIndex: 100; height: 100vh"
+            data-fp-styles="--slideIndex:100;"
+          >
+            <div class="fp-tableCell" style="height: 100vh">
+              <!---->
+              <div class="slide-content" id="eig">
+                <div class="logotype contact-logotype">
+                  <svg
+                    viewBox="0 0 297 72"
+                    xmlns="http://www.w3.org/2000/svg"
+                    svg-inline=""
+                    role="presentation"
+                    focusable="false"
+                    tabindex="-1"
+                  >
                     <path
                       d="M75.128 18.722C72.33 23.953 70.931 29.712 70.931 36c0 6.29 1.4 12.049 4.197 17.278 2.798 5.231 6.641 9.498 11.531 12.802 4.887 3.305 10.387 5.278 16.5 5.92v-2.407c-6.306-1.54-10.873-5.294-13.702-11.261-2.83-5.968-4.246-13.412-4.246-22.332 0-8.919 1.415-16.364 4.246-22.332 2.829-5.968 7.396-9.722 13.701-11.261V0C97.046.642 91.546 2.615 86.66 5.92c-4.89 3.306-8.733 7.572-11.53 12.802zm122.49-14.776h2.412c.707 0 1.656.42 2.847 1.252a13.63 13.63 0 013.088 2.984c.868 1.155 1.302 2.151 1.302 2.984v33.882h-.482L171.18 1.06h-19.587v2.887h1.448c.641 0 1.462.42 2.46 1.252.996.834 1.882 1.83 2.653 2.984.772 1.155 1.158 2.151 1.158 2.984v50.823c0 .707-.386 1.557-1.158 2.552a13.474 13.474 0 01-2.653 2.598c-.998.739-1.819 1.107-2.46 1.107h-1.448v2.888h21.71v-2.888h-2.412c-.71 0-1.658-.416-2.847-1.251a13.542 13.542 0 01-3.088-2.984c-.868-1.156-1.302-2.15-1.302-2.984V13.572h.482l46.99 58.235h.483V11.166c0-.833.433-1.83 1.301-2.984A13.577 13.577 0 01216 5.198c1.189-.833 2.137-1.252 2.845-1.252h1.448V1.06h-22.675v2.887zm79.94 55.204c-3.7 6.064-9.214 9.096-16.548 9.096h-9.84v-64.3h9.454c4.953 0 9.118 1.43 12.496 4.284 3.377 2.856 5.885 6.706 7.526 11.55 1.639 4.847 2.46 10.285 2.46 16.317 0 9.304-1.85 16.989-5.549 23.053zm14.328-41.39c-3.41-5.295-7.832-9.4-13.267-12.321-5.436-2.92-11.112-4.38-17.03-4.38H229.94v2.887h1.447c.642 0 1.463.37 2.461 1.107.996.74 1.88 1.606 2.654 2.6.772.995 1.158 1.845 1.158 2.551v51.785c0 .707-.386 1.557-1.158 2.552a13.534 13.534 0 01-2.654 2.598c-.998.739-1.819 1.107-2.461 1.107h-1.447v2.888h32.034c6.045 0 11.755-1.54 17.127-4.62 5.37-3.08 9.696-7.317 12.977-12.707C295.36 48.417 297 42.45 297 35.904c0-6.802-1.705-12.85-5.114-18.144zM129.112 5.92C124.224 2.616 118.724.643 112.614 0v2.407c6.303 1.54 10.87 5.293 13.7 11.261 2.83 5.968 4.246 13.413 4.246 22.332 0 8.92-1.416 16.364-4.246 22.332-2.83 5.967-7.397 9.722-13.7 11.261V72c6.11-.642 11.61-2.615 16.498-5.92 4.889-3.304 8.733-7.57 11.531-12.802 2.798-5.23 4.198-10.988 4.198-17.278 0-6.287-1.4-12.047-4.198-17.278-2.798-5.23-6.642-9.496-11.53-12.801zm-86.61 57.994c-2.927 2.888-6.964 4.332-12.11 4.332h-9.165V35.904h10.42c4.695 0 8.41 1.38 11.145 4.139 2.733 2.76 4.1 6.642 4.1 11.647 0 5.263-1.463 9.337-4.39 12.224zM21.227 3.946h8.49c3.923 0 7.124 1.396 9.601 4.188 2.477 2.791 3.715 6.4 3.715 10.83 0 4.235-.933 7.475-2.798 9.72-1.867 2.248-4.954 3.692-9.263 4.332h-9.745V3.946zM54.853 39.37c-3.7-2.758-8.443-4.587-14.232-5.486V33.4c4.566-1.025 8.2-2.855 10.903-5.486 2.702-2.63 4.053-5.968 4.053-10.012 0-5.582-2.398-9.784-7.19-12.609C43.596 2.471 37.438 1.06 29.91 1.06H0v2.887h1.447c.642 0 1.462.37 2.46 1.107.997.74 1.882 1.606 2.653 2.6.772.995 1.159 1.845 1.159 2.551v51.785c0 .707-.387 1.557-1.159 2.552a13.474 13.474 0 01-2.653 2.598c-.998.739-1.818 1.107-2.46 1.107H0v2.888h30.49c9.132 0 16.402-1.732 21.805-5.198 5.404-3.465 8.106-8.278 8.106-14.439 0-5.325-1.85-9.368-5.548-12.128z"
                       fill="#000"
                       fill-rule="evenodd"
                     ></path>
                   </svg>
-                                    </div>
-                                    <div>
-                                        <p>
-                                            San Francisco, CA<br />
-                                            <a href="mailto:info@bondcap.com" target="_blank" rel="nofollow noopener noreferrer">info@bondcap.com</a
+                </div>
+                <div>
+                  <p>
+                    San Francisco, CA<br />
+                    <a
+                      href="mailto:info@bondcap.com"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      >info@bondcap.com</a
                     >
                     ·
                     <a
@@ -2204,16 +2448,15 @@
                   ></path>
                 </svg>
               </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- fullpage_wraper -->
-                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fullpage_wraper -->
+    </div>
 
-                    <!-- js lInk -->
-                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-                    <script src="./js/script.js"></script>
-</body>
-
+    <!-- js lInk -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
