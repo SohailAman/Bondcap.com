@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Theinhardt';
+    font-family: Theinhardt;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/fonts/Theinhardt-Regular.53d77143.woff2) format("woff2"), url(/assets/fonts/Theinhardt-Regular.a2cab705.woff) format("woff"), url(/assets/fonts/Theinhardt-Regular.686ac72c.ttf) format("truetype")
+    src: url(/assets/fonts/Theinhardt-Regular.53d77143.woff2) format("woff2"), url(/assets/fonts/Theinhardt-Regular.a2cab705.woff) format("woff")
 }
 
 @font-face {
-    font-family: 'Theinhardt' Bold;
+    font-family: Theinhardt Bold;
     font-style: normal;
     font-weight: 700;
     src: url(/assets/fonts/Theinhardt-Bold.1c663195.woff2) format("woff2"), url(/assets/fonts/Theinhardt-Bold.04de84c6.woff) format("woff"), url(/assets/fonts/Theinhardt-Bold.93264fe7.ttf) format("truetype")
@@ -16,7 +16,7 @@
     font-family: Chronicle Display;
     font-style: normal;
     font-weight: 700;
-    src: url(/assets/fonts/ChronicleDisp-Roman.200fdabe.woff2) format("woff2"), url(/assets/fonts/ChronicleDisp-Roman.f9ab05ed.woff) format("woff"), url(/assets/fonts/ChronicleDisp-Roman.36672f48.ttf) format("truetype")
+    src: url(/assets/fonts/ChronicleDisp-Roman.200fdabe.woff2) format("woff2"), url(/assets/fonts/ChronicleDisp-Roman.f9ab05ed.woff) format("woff")
 }
 
 :root {
@@ -107,6 +107,11 @@ div.header svg:focus {
 
 .mobile div.header {
     margin: 5vh 0 0 -15px
+}
+
+.whiteO svg path {
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
 }
 
 .mobile div.header svg {
@@ -215,64 +220,14 @@ body.-scroll-direction-up svg path {
     max-width: 300px
 }
 
-.swiper {
-    background: url(../assets/img/landing_landscape.be280039.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 1;
-}
 
-.landing-bg.-fixed-section .logotype {
-    width: 100%;
-    height: calc(100vh - 100px);
-    transform: translateY(0);
-    transition: transform 1.2s cubic-bezier(.32, .35, .01, 1)
-}
-
-.landing-bg.-fixed-section .logotype.animate {
-    transform: translateY(-100%)
-}
-
-.landing-bg.-fixed-section .logotype.animate svg {
-    transform: translate(-50%, -50%) scale(1.5)
-}
-
-.landing-bg.-fixed-section svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 322px;
-    margin-top: 20px;
-    z-index: 1;
-    opacity: .8;
-    transition: transform 1.2s cubic-bezier(.32, .35, .01, 1)
-}
-
-.landing-bg.-fixed-section svg.ios-gsa-fix-landing {
-    margin-top: 75px
-}
-
-@media screen and (max-width:576px) {
-    .landing-bg.-fixed-section svg {
-        top: 41.5%;
-        width: 164px
-    }
-}
-
-.landing-bg.-fixed-section svg path {
-    fill: #030303
-}
-
-.landing-bg.-fixed-section:first-child {
-    display: none
-}
 
 body.-add-opacity .-fixed-section {
     opacity: 0;
     height: 0
 }
+
+
 
 @media screen and (max-width:576px) {
     .slide-landing div.logotype svg {
@@ -281,11 +236,15 @@ body.-add-opacity .-fixed-section {
         margin: -6vh auto 0
     }
 
-    .landing-bg.-fixed-section {
-        background: #e0e0e0 url(/assets/img/landing_portrait.5f67586e.jpg) 50% no-repeat;
-        background-position: 0 -12vh;
-        background-size: cover
+    .swiper {
+        background: url(/assets/img/landing_portrait.5f67586e.jpg) !important;
+        background-position: 0 -16vh !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed;
+
     }
+
 }
 
 .slide-statement {
@@ -303,17 +262,7 @@ body.-add-opacity .-fixed-section {
     max-width: 125vh
 }
 
-@media screen and (max-width:576px) {
-    .slide-statement p {
-        line-height: calc(var(--vmix)*4.99);
-        font-size: calc(var(--vmix)*4.5);
-        max-width: 90%
-    }
 
-    .slide-statement.slide-trends p {
-        max-width: 82%
-    }
-}
 
 .slide-investments,
 body.-active-investments.-active-slide-scrollable div.logo {
@@ -349,7 +298,7 @@ body.-active-investments.-active-slide-scrollable div.logo {
 
 .slide-investments div.slide-conte h2,
 .slide-investments div.slide-content h3 {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400
 }
 
@@ -374,7 +323,7 @@ body.-active-investments.-active-slide-scrollable div.logo {
 
 .slide-investments div.slide-content p {
     margin-top: 35px;
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: calc(var(--vmix)*1.24);
@@ -442,16 +391,17 @@ body.-active-investments.-active-slide-scrollable div.logo {
 .slide-investments div.slide-content .vertical-scroll-wrapper ul {
     position: relative;
     top: 1vh;
-    animation: scroll 25s linear forwards infinite;
+    animation: scroll linear infinite both;
 }
 
 @keyframes scroll {
-    0% {
-        top: 2vh;
+    from {
+        transform: translateY(300px);
     }
 
-    50% {
-        top: -54vh;
+    to {
+        transform: translateY(-950px);
+
     }
 }
 
@@ -481,162 +431,7 @@ body.-active-investments.-active-slide-scrollable div.logo {
     width: 24vh
 }
 
-@media screen and (max-width:576px) {
-    .slide-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*3);
-        margin-top: 15vh
-    }
 
-    .slide-investments div.slide-content hr {
-        margin: 8vh auto
-    }
-
-    .slide-investments div.slide-content p {
-        font-size: calc(var(--vmix)*3)
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper {
-        margin-bottom: calc(var(--vmix)*0.8);
-        height: 50vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 40vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        height: 10vh;
-        width: 18vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li svg {
-        width: 20vh
-    }
-}
-
-@media screen and (min-width:576px) and (max-width:768px) {
-    .slide-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*3);
-        margin-top: 15vh
-    }
-
-    .slide-investments div.slide-content hr {
-        margin: 8vh auto
-    }
-
-    .slide-investments div.slide-content p {
-        font-size: calc(var(--vmix)*2)
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper {
-        margin-bottom: calc(var(--vmix)*0.8);
-        height: 50vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 60vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        height: 10vh;
-        width: 20vh
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:992px) {
-    .slide-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*3);
-        margin-top: 15vh
-    }
-
-    .slide-investments div.slide-content hr {
-        margin: 8vh auto
-    }
-
-    .slide-investments div.slide-content p {
-        font-size: calc(var(--vmix)*2)
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper {
-        margin-bottom: calc(var(--vmix)*0.8);
-        height: 50vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 80vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        height: 10vh;
-        width: 25vh
-    }
-}
-
-@media screen and (min-width:992px) and (max-width:1400px) {
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 120vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        width: 25vh
-    }
-}
-
-@media screen and (min-width:1400px) {
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 150vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        width: 26vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) {
-    .slide-investments div.slide-content hr {
-        margin: 10vh auto
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper {
-        height: 50vh;
-        overflow: hidden
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul {
-        max-width: 175vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper ul li {
-        height: 10vh;
-        width: 33vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) and (max-height:600px) {
-    .slide-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*1.72);
-        margin-top: 25vh
-    }
-
-    .slide-investments div.slide-content p {
-        font-size: calc(var(--vmix)*1.45);
-        margin: 0 0 10vh
-    }
-
-    .slide-investments div.slide-content ul li {
-        height: 20vh
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper {
-        margin-bottom: 0;
-        overflow: visible
-    }
-
-    .slide-investments div.slide-content .vertical-scroll-wrapper.vs-enabled ul {
-        -webkit-animation-name: none;
-        animation-name: none
-    }
-}
 
 .slide-reports,
 body.-active-reports.-active-slide-scrollable div.logo {
@@ -651,24 +446,20 @@ body.-active-reports.-active-slide-scrollable div.logo {
     stroke: #a8c0d4
 }
 
+.slide-internettrends .slide-content {
+    padding-top: 6em !important;
+}
+
 .slide-internettrends div.fp-scroller {
     overflow: visible;
 }
 
-.slide-internettrends div.fp-scroller a.footer {
-    bottom: -50%;
-}
-
-div.slide-content h2.title-section {
-    margin-top: 2vh !important;
-}
 
 .slide-reports div.slide-content h2.title-section {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     text-align: center;
     margin-bottom: 8vh;
-    margin-top: 18vh
 }
 
 .slide-reports div.slide-content hr {
@@ -694,8 +485,9 @@ div.slide-content h2.title-section {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    height: 12vh;
+    line-height: 12vh;
     padding: 0;
+    width: 24vh
 }
 
 .slide-reports div.slide-content ul li.reports-special {
@@ -717,65 +509,7 @@ div.slide-content h2.title-section {
     background: rgba(168, 192, 212, .5) !important
 }
 
-@media screen and (max-width:576px) {
-    .slide-reports div.slide-content h2.title-section {
-        font-size: calc(var(--vmix)*3);
-        margin-bottom: 5vh;
-        margin-top: 15vh
-    }
 
-    .slide-reports div.slide-content ul {
-        max-width: 50vh
-    }
-
-    .slide-reports div.slide-content ul li {
-        height: 8vh;
-    }
-
-    .slide-reports div.slide-content ul li.reports-special {
-        width: 50vh
-    }
-
-    .slide-reports div.slide-content ul li a {
-        font-family: Chronicle Display, Times, serif;
-        font-weight: 400;
-        color: #a8c0d4;
-        font-size: calc(var(--vmix)*4.99)
-    }
-
-    .slide-reports div.slide-content ul li a:hover {
-        color: #fff
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) {
-    .slide-reports div.slide-content ul {
-        max-width: 175vh
-    }
-
-    .slide-reports div.slide-content ul li {
-        height: 11vh;
-    }
-
-    .slide-reports div.slide-internettrends ul {
-        max-width: 225vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) and (max-height:600px) {
-    .slide-reports div.slide-content h2.title-section {
-        font-size: calc(var(--vmix)*1.72);
-        margin-top: 25vh
-    }
-
-    .slide-reports div.slide-content ul {
-        max-width: 175vh
-    }
-
-    .slide-reports div.slide-content ul li {
-        height: 15vh;
-    }
-}
 
 body.-active-partners.-active-slide-scrollable div.logo {
     background: #fff
@@ -786,7 +520,7 @@ body.-active-partners.-active-slide-scrollable div.logo {
 }
 
 .slide-partners div.slide-content h2.title-section {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     text-align: center
 }
@@ -840,96 +574,7 @@ body.-active-partners.-active-slide-scrollable div.logo {
     opacity: 1
 }
 
-@media screen and (max-width:1400px) {
-    .slide-partners div.slide-content h2.title-section {
-        margin-top: 18vh
-    }
-}
 
-@media screen and (max-width:576px) {
-    .slide-partners div.slide-content h2.title-section {
-        font-size: calc(var(--vmix)*3);
-        margin-top: 15vh
-    }
-
-    .slide-partners div.slide-content ul {
-        margin-bottom: 15vh;
-        max-width: 45vh
-    }
-
-    .slide-partners div.slide-content ul li {
-        height: 22vh;
-        margin: 1vh 0;
-        width: 22vh
-    }
-
-    .slide-partners div.slide-content ul li a div {
-        background-size: 15vh;
-        height: 15vh
-    }
-
-    .slide-partners div.slide-content ul li a p {
-        opacity: 1;
-        font-size: calc(var(--vmix)*3.33);
-        align-items: flex-end;
-        display: flex;
-        flex-direction: row;
-        background: transparent;
-        height: 19vh;
-        margin-top: 0
-    }
-
-    .slide-partners div.slide-content ul.ios-gsa-fix-partners {
-        max-width: 50vh
-    }
-
-    .slide-partners div.slide-content ul.ios-gsa-fix-partners li {
-        width: 25vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) {
-    .slide-partners div.slide-content ul {
-        max-width: 200vh
-    }
-
-    .slide-partners div.slide-content ul li {
-        width: 45vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) and (max-height:600px) {
-    .slide-partners div.slide-content h2.title-section {
-        margin-top: 25vh
-    }
-
-    .slide-partners div.slide-content ul {
-        max-width: 160vh;
-        margin-bottom: 20vh
-    }
-
-    .slide-partners div.slide-content ul li {
-        height: 30vh;
-        width: 40vh
-    }
-
-    .slide-partners div.slide-content ul li a div {
-        background-size: 25vh;
-        height: 25vh
-    }
-
-    .slide-partners div.slide-content ul li a p {
-        background-color: transparent;
-        background-image: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, .8));
-        opacity: 1;
-        font-size: calc(var(--vmix)*1.72);
-        align-items: flex-end;
-        display: flex;
-        flex-direction: row;
-        height: 30vh;
-        margin-top: 0
-    }
-}
 
 .slide-closing {
     background-color: #fff
@@ -962,28 +607,12 @@ body.-active-partners.-active-slide-scrollable div.logo {
 .slide-closing p {
     display: block;
     margin: 0 auto;
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: calc(var(--vmix)*1.24)
 }
 
-@media screen and (max-width:576px) {
-    .slide-closing div.logotype {
-        width: 112px;
-        margin-top: -5vh
-    }
-
-    .slide-closing div.logotype svg {
-        height: 30px;
-        width: 112px
-    }
-
-    .slide-closing p {
-        margin-top: calc(var(--vmix)*6.66);
-        font-size: calc(var(--vmix)*2.5)
-    }
-}
 
 .page-investments h3.fixed-title-box {
     display: none
@@ -1036,15 +665,10 @@ body.-active-partners.-active-slide-scrollable div.logo {
     transition: fill .2s linear
 }
 
-@media screen and (max-width:576px) {
-    #back.back-investments .back {
-        display: none
-    }
-}
 
 h3.fixed-title-box {
     font-size: calc(var(--vmix)*1.05);
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     display: block;
     position: fixed;
@@ -1061,11 +685,7 @@ h3.fixed-title-box:empty {
     opacity: 0
 }
 
-@media screen and (max-width:576px) {
-    h3.fixed-title-box {
-        font-size: calc(var(--vmix)*2.5)
-    }
-}
+
 
 .page-investments div.slide-content h2.title-page {
     margin-top: 22vh
@@ -1122,138 +742,11 @@ h3.fixed-title-box:empty {
     padding: 3vh 0
 }
 
-@media screen and (max-width:576px) {
-    .page-investments .fullpage-wrapper {
-        transition-delay: .2s !important
-    }
-
-    .page-investments div.slide-content h2.title-page {
-        margin: 15vh 0 4vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        font-size: calc(var(--vmix)*2.5);
-        margin-bottom: 0
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 40vh
-    }
-
-    .page-investments div.slide-content ul li {
-        height: 10vh;
-        width: 18vh
-    }
-
-    .page-investments div.slide-content ul li svg {
-        width: 20vh
-    }
-}
-
-@media screen and (min-width:576px) and (max-width:768px) {
-    .page-investments div.slide-content h2.title-page {
-        margin: 17vh 0 8vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        margin-top: 0;
-        margin-bottom: 4vh;
-        font-size: calc(var(--vmix)*2.5)
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 60vh
-    }
-
-    .page-investments div.slide-content ul li {
-        height: 10vh;
-        width: 20vh
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:992px) {
-    .page-investments div.slide-content h2.title-page {
-        margin: 17vh 0 6vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        font-size: calc(var(--vmix)*2.5);
-        margin-bottom: 3vh
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 80vh
-    }
-
-    .page-investments div.slide-content ul li {
-        width: 20vh
-    }
-}
-
-@media screen and (min-width:992px) and (max-width:1400px) {
-    .page-investments div.slide-content h2.title-page {
-        margin: 17vh 0 6vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        font-size: calc(var(--vmix)*2.5);
-        margin-bottom: 3vh
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 120vh
-    }
-
-    .page-investments div.slide-content ul li {
-        width: 25vh
-    }
-}
-
-@media screen and (min-width:1400px) {
-    .page-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*1.45);
-        margin: 17vh 0 8vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        font-size: calc(var(--vmix)*1.45);
-        margin-bottom: 8vh
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 150vh
-    }
-
-    .page-investments div.slide-content ul li {
-        width: 26vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) {
-    .page-investments div.slide-content h2.title-page {
-        font-size: calc(var(--vmix)*1.45);
-        margin: 17vh 0 8vh
-    }
-
-    .page-investments div.slide-content h3.title-section {
-        font-size: calc(var(--vmix)*1.45);
-        margin-bottom: 8vh
-    }
-
-    .page-investments div.slide-content ul {
-        max-width: 175vh
-    }
-
-    .page-investments div.slide-content ul li {
-        height: 12vh;
-        width: 33vh
-    }
-}
 
 .page-liminal div.content {
     display: block;
     margin: 0 auto;
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: calc(var(--vmix)*1.72);
     font-size: calc(var(--vmix)*1.24);
@@ -1276,7 +769,7 @@ h3.fixed-title-box:empty {
 }
 
 .page-liminal h2 {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: calc(var(--vmix)*2);
     text-align: center;
@@ -1421,14 +914,14 @@ h3.fixed-title-box:empty {
 
 .page-partners .slide-bio div.slide-content .bio-list-container .bio-list-label,
 .page-partners .slide-cv div.slide-content .bio-list-container .bio-list-label {
-    font-family: 'Theinhardt' Bold, Helvetica, Arial, sans-serif;
+    font-family: Theinhardt Bold, Helvetica, Arial, sans-serif;
     font-weight: 700;
     margin-bottom: calc(var(--vmix)*0.8)
 }
 
 .page-partners .slide-bio div.slide-content .bio-list-container .bio-list,
 .page-partners .slide-cv div.slide-content .bio-list-container .bio-list {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: calc(var(--vmix)*1.72);
     margin-top: calc(var(--vmix)*0.8)
@@ -1445,7 +938,7 @@ h3.fixed-title-box:empty {
 
 .page-partners .slide-bio div.slide-content .bio-text-container p,
 .page-partners .slide-cv div.slide-content .bio-text-container p {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400
 }
 
@@ -1459,7 +952,7 @@ h3.fixed-title-box:empty {
 
 .page-partners .slide-bio div.slide-content .bio-text-container .bio-social-list a,
 .page-partners .slide-cv div.slide-content .bio-text-container .bio-social-list a {
-    font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
+    font-family: Theinhardt, Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #8ab1d1
 }
@@ -1484,285 +977,6 @@ h3.fixed-title-box:empty {
     padding: 0 10em
 }
 
-@media screen and (max-width:1400px) {
-    .page-partners .bio-name-container {
-        margin: 0;
-        order: 2
-    }
-
-    .page-partners .slide-bio div.slide-content,
-    .page-partners .slide-cv div.slide-content {
-        margin: 2.5em;
-        padding: 1vh
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-image-container,
-    .page-partners .slide-cv div.slide-content .bio-image-container {
-        margin-top: 10vh;
-        order: 1;
-        width: 100%
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-image-container .bio-image,
-    .page-partners .slide-cv div.slide-content .bio-image-container .bio-image {
-        display: block;
-        margin: 0 auto;
-        height: 40vh;
-        width: auto
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container,
-    .page-partners .slide-cv div.slide-content .bio-list-container {
-        text-align: left;
-        font-size: calc(var(--vmix)*2.5);
-        min-height: 5vh;
-        margin-bottom: 12px;
-        width: 100%
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container ul li,
-    .page-partners .slide-cv div.slide-content .bio-list-container ul li {
-        height: 2.5vh
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container .bio-list-label,
-    .page-partners .slide-cv div.slide-content .bio-list-container .bio-list-label {
-        margin-bottom: calc(var(--vmix)*2)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container,
-    .page-partners .slide-cv div.slide-content .bio-text-container {
-        margin-bottom: 2.5em;
-        order: 3;
-        width: 100%
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container p,
-    .page-partners .slide-cv div.slide-content .bio-text-container p {
-        line-height: calc(var(--vmix)*3.33);
-        font-size: calc(var(--vmix)*2.5)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container .bio-social-list,
-    .page-partners .slide-cv div.slide-content .bio-text-container .bio-social-list {
-        margin-bottom: calc(var(--vmix)*4.99);
-        padding-top: calc(var(--vmix)*4.99);
-        font-size: calc(var(--vmix)*2.5)
-    }
-
-    .slide-cv .bio-name-container {
-        margin-top: 10vh
-    }
-}
-
-@media screen and (max-width:576px) {
-
-    .page-partners .slide-bio div.slide-content,
-    .page-partners .slide-cv div.slide-content {
-        margin: 1.25em
-    }
-
-    .page-partners .slide-bio div.slide-content p,
-    .page-partners .slide-cv div.slide-content p {
-        font-size: calc(var(--vmix)*3)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-image-container .bio-image,
-    .page-partners .slide-cv div.slide-content .bio-image-container .bio-image {
-        display: block;
-        margin: 0 auto;
-        height: auto;
-        width: 100%
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container,
-    .page-partners .slide-cv div.slide-content .bio-list-container {
-        font-size: calc(var(--vmix)*3)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container ul li,
-    .page-partners .slide-cv div.slide-content .bio-list-container ul li {
-        margin-bottom: calc(var(--vmix)*0.8)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-name-container p,
-    .page-partners .slide-cv div.slide-content .bio-name-container p {
-        margin-top: calc(var(--vmix)*2);
-        font-size: calc(var(--vmix)*4.5)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container p,
-    .page-partners .slide-cv div.slide-content .bio-text-container p {
-        line-height: calc(var(--vmix)*4.5);
-        font-size: calc(var(--vmix)*3)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container .bio-social-list,
-    .page-partners .slide-cv div.slide-content .bio-text-container .bio-social-list {
-        margin-bottom: calc(var(--vmix)*4.99);
-        padding-top: calc(var(--vmix)*4.99);
-        font-size: calc(var(--vmix)*3)
-    }
-
-    .page-partners .slide-bio div.slide-content .footer:before,
-    .page-partners .slide-cv div.slide-content .footer:before {
-        content: "";
-        height: 15vh
-    }
-
-    .page-partners .fullpage-wrapper {
-        transition-delay: .2s !important
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:992px) {
-
-    .page-partners .slide-bio div.slide-content .bio-list-container,
-    .page-partners .slide-cv div.slide-content .bio-list-container {
-        font-size: calc(var(--vmix)*1.88)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container .bio-list-label,
-    .page-partners .slide-cv div.slide-content .bio-list-container .bio-list-label {
-        margin-bottom: calc(var(--vmix)*1.88)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-name-container p,
-    .page-partners .slide-cv div.slide-content .bio-name-container p {
-        font-size: calc(var(--vmix)*4.99)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container p,
-    .page-partners .slide-cv div.slide-content .bio-text-container p {
-        line-height: calc(var(--vmix)*3.33);
-        font-size: calc(var(--vmix)*1.88)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container .bio-social-list,
-    .page-partners .slide-cv div.slide-content .bio-text-container .bio-social-list {
-        padding-top: calc(var(--vmix)*4.99);
-        font-size: calc(var(--vmix)*1.88)
-    }
-}
-
-@media screen and (max-width:992px) {
-    #back.back-partner .back {
-        left: 0
-    }
-}
-
-@media screen and (min-width:576px) {
-    .static-header {
-        background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0, #fff 9%);
-        height: 80px;
-        left: 5%;
-        position: fixed;
-        top: 0;
-        width: 90%;
-        z-index: 1
-    }
-}
-
-@media screen and (min-width:992px) and (max-width:1400px) {
-
-    .page-partners .slide-bio div.slide-content .bio-list-container,
-    .page-partners .slide-cv div.slide-content .bio-list-container {
-        font-size: calc(var(--vmix)*1.72)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-list-container .bio-list-label,
-    .page-partners .slide-cv div.slide-content .bio-list-container .bio-list-label {
-        margin-bottom: calc(var(--vmix)*1.45)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-name-container p,
-    .page-partners .slide-cv div.slide-content .bio-name-container p {
-        font-size: calc(var(--vmix)*3.33)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container p,
-    .page-partners .slide-cv div.slide-content .bio-text-container p {
-        line-height: calc(var(--vmix)*3.33);
-        font-size: calc(var(--vmix)*1.72)
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-text-container .bio-social-list,
-    .page-partners .slide-cv div.slide-content .bio-text-container .bio-social-list {
-        padding-top: calc(var(--vmix)*3.33);
-        font-size: calc(var(--vmix)*1.72)
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) {
-
-    .page-partners .slide-bio div.slide-content .bio-image-container,
-    .page-partners .slide-bio div.slide-content .bio-list-container ul,
-    .page-partners .slide-bio div.slide-content .bio-text-container,
-    .page-partners .slide-cv div.slide-content .bio-image-container,
-    .page-partners .slide-cv div.slide-content .bio-list-container ul,
-    .page-partners .slide-cv div.slide-content .bio-text-container {
-        margin-bottom: 15vh
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-name-container,
-    .page-partners .slide-cv div.slide-content .bio-name-container {
-        margin-top: 5vh
-    }
-
-    .page-partners .bio-name-container p {
-        margin-bottom: 0
-    }
-
-    .static-header .bio-name-container {
-        margin-top: 18vh
-    }
-}
-
-@media screen and (min-aspect-ratio:16/9) and (max-height:600px) {
-    .mobile.page-partners .slide-bio div.slide-content .bio-image-container {
-        margin: 15vh 0 0
-    }
-
-    .mobile.page-partners .slide-bio div.slide-content .bio-image-container img {
-        height: 50vh
-    }
-
-    .mobile.page-partners .slide-bio div.slide-content .bio-list-container ul {
-        margin-bottom: 5vh
-    }
-
-    .mobile.page-partners .slide-bio div.slide-content .bio-list-container ul li {
-        height: 5vh
-    }
-
-    .mobile.page-partners .slide-bio div.slide-content .bio-text-container {
-        margin-bottom: 0
-    }
-
-    .mobile .bio-name-container {
-        margin-top: 0
-    }
-
-    .mobile .bio-name-container p {
-        font-size: calc(var(--vmix)*3.33)
-    }
-}
-
-@media screen and (min-width:1400px) {
-    .page-partners .static-header {
-        height: 25vh
-    }
-
-    .page-partners .static-header .bio-name-container {
-        margin-top: 16vh;
-        display: block
-    }
-
-    .page-partners .slide-bio div.slide-content .bio-name-container,
-    .page-partners .slide-cv div.slide-content .bio-name-container {
-        visibility: hidden
-    }
-}
 
 .fp-section {
     position: relative;
