@@ -1,0 +1,11 @@
+@media screen and (max-width:1900px) and (min-width:576px) {
+    .fullpage-wrapper {
+        background: url(/assets/img/landing_landscape.be280039.jpg) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+        z-index: 9 !important;
+
+    }
+}

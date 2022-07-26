@@ -1,28 +1,5 @@
-@font-face {
-    font-family: Theinhardt;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/assets/fonts/Theinhardt-Regular.53d77143.woff2) format("woff2"), url(/assets/fonts/Theinhardt-Regular.a2cab705.woff) format("woff")
-}
-
-@font-face {
-    font-family: Theinhardt Bold;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/assets/fonts/Theinhardt-Bold.1c663195.woff2) format("woff2"), url(/assets/fonts/Theinhardt-Bold.04de84c6.woff) format("woff"), url(/assets/fonts/Theinhardt-Bold.93264fe7.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Chronicle Display;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/assets/fonts/ChronicleDisp-Roman.200fdabe.woff2) format("woff2"), url(/assets/fonts/ChronicleDisp-Roman.f9ab05ed.woff) format("woff")
-}
-
-:root {
-    --vh: 1vh;
-    --vw: 1vw;
-    --vmix: calc(var(--vw)*0.83 + var(--vh)*0.17)
+::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width:576px) {
@@ -112,6 +89,17 @@ div.header svg:focus {
 .whiteO svg path {
     fill: #fff;
     transition: fill 0.3s ease-in-out;
+}
+
+.blackO svg path {
+    fill: #000;
+    transition: fill 0.3s ease-in-out;
+}
+
+.slideOut {
+    width: 27em !important;
+    transform: translateY(50px);
+    transition: all 0.2s linear !important;
 }
 
 .mobile div.header svg {
@@ -227,25 +215,30 @@ body.-add-opacity .-fixed-section {
     height: 0
 }
 
+.swiper_bg_img .first_img_swiper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -2 !important;
+}
 
-
-@media screen and (max-width:576px) {
-    .slide-landing div.logotype svg {
-        display: block;
-        height: 36px;
-        margin: -6vh auto 0
-    }
-
-    .swiper {
-        background: url(/assets/img/landing_portrait.5f67586e.jpg) !important;
-        background-position: 0 -16vh !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-attachment: fixed;
-
-    }
+.swiper_bg_img .second_img_swiper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
 
 }
+
+/* .fullpage-wrapper {
+    background: url(../assets/img/landing_portrait.5f67586e.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 1;
+    background-repeat: no-repeat;
+} */
 
 .slide-statement {
     background-color: #fff
@@ -256,7 +249,7 @@ body.-add-opacity .-fixed-section {
     margin: 0 auto;
     line-height: calc(var(--vmix)*3.33);
     text-align: center;
-    font-size: calc(var(--vmix)*3.33);
+    font-size: 40px;
     font-family: Chronicle Display, Times, serif;
     font-weight: 400;
     max-width: 125vh
@@ -283,11 +276,13 @@ body.-active-investments.-active-slide-scrollable div.logo {
 
 .slide-landing .slide-content svg {
     font-family: 'Chronicle Display', Times, serif;
-    width: 20em !important;
+    width: 20em;
     opacity: .8;
     padding-bottom: 1em;
     margin-top: -10% !important;
     font-weight: 900 !important;
+    transition: all 0.3s ease;
+
 }
 
 .slide-landing .slide-content {
@@ -391,12 +386,12 @@ body.-active-investments.-active-slide-scrollable div.logo {
 .slide-investments div.slide-content .vertical-scroll-wrapper ul {
     position: relative;
     top: 1vh;
-    animation: scroll linear infinite both;
+    animation: scroll linear 23s infinite both;
 }
 
 @keyframes scroll {
     from {
-        transform: translateY(300px);
+        transform: translateY(10px);
     }
 
     to {
@@ -498,7 +493,7 @@ body.-active-reports.-active-slide-scrollable div.logo {
     font-family: Chronicle Display, Times, serif;
     font-weight: 400;
     color: #a8c0d4;
-    font-size: calc(var(--vmix)*3.33)
+    font-size: 40px;
 }
 
 .slide-reports div.slide-content ul li a:hover {
@@ -593,7 +588,7 @@ body.-active-partners.-active-slide-scrollable div.logo {
 
 .slide-closing div.logotype svg {
     cursor: pointer;
-    height: 36px;
+    height: 150px;
     width: 139px
 }
 
@@ -978,10 +973,6 @@ h3.fixed-title-box:empty {
 }
 
 
-.fp-section {
-    position: relative;
-    box-sizing: border-box
-}
 
 .fp-slide {
     float: left
@@ -1197,14 +1188,7 @@ h3.fixed-title-box:empty {
     left: 20px
 }
 
-.fp-auto-height.fp-section,
-.fp-auto-height .fp-slide,
-.fp-auto-height .fp-tableCell,
-.fp-responsive .fp-auto-height-responsive.fp-section,
-.fp-responsive .fp-auto-height-responsive .fp-slide,
-.fp-responsive .fp-auto-height-responsive .fp-tableCell {
-    height: auto !important
-}
+
 
 .fp-sr-only {
     position: absolute;

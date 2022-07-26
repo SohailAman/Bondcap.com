@@ -10,7 +10,6 @@ let seven = document.querySelector("#seven");
 let eight = document.querySelector("#eight");
 let nine = document.querySelector("#nine");
 let backToTop = document.querySelector("#backToTop");
-let scroll_list = document.getElementById("investment-scroll__list");
 
 // home
 const backSlide = () => {
@@ -29,11 +28,14 @@ backToTop.addEventListener("click", () => {
 const Sec1 = () => {
   if (second.classList.contains("swiper-slide-active")) {
     logo.style.opacity = "1";
-    logo.style.fill = "#000";
+    logo.classList.remove("whiteO");
+    logo.classList.add("blackO");
     logo.style.transition = "opacity 1s cubic-bezier(.32, .35, .01, 1)";
+    brandName.classList.add("slideOut");
   } else {
     logo.style.opacity = "0";
     logo.style.transition = "opacity 0 ";
+    brandName.classList.remove("slideOut");
   }
 };
 setInterval(Sec1, 500);
@@ -42,8 +44,8 @@ setInterval(Sec1, 500);
 const Sec2 = () => {
   if (third.classList.contains("swiper-slide-active")) {
     logo.classList.add("whiteO");
+    logo.classList.remove("blackO");
     logo.style.opacity = "1";
-    scroll_list.style.animationDuration = "25s";
   }
 };
 setInterval(Sec2, 500);
@@ -52,7 +54,7 @@ setInterval(Sec2, 500);
 const Sec3 = () => {
   if (fourth.classList.contains("swiper-slide-active")) {
     logo.classList.remove("whiteO");
-    logo.style.fill = "#000";
+    logo.classList.add("blackO");
     logo.style.opacity = "1";
     logo.style.transition = "all 0.9s linear";
   }
@@ -63,6 +65,7 @@ setInterval(Sec3, 500);
 const Sec4 = () => {
   if (fifth.classList.contains("swiper-slide-active")) {
     logo.classList.add("whiteO");
+    logo.classList.remove("blackO");
     logo.style.opacity = "1";
     logo.style.transition = "all 0.9s linear";
   }
@@ -73,6 +76,7 @@ setInterval(Sec4, 500);
 const Sec5 = () => {
   if (fifth.classList.contains("swiper-slide-active")) {
     logo.classList.add("whiteO");
+    logo.classList.remove("blackO");
     logo.style.opacity = "1";
   }
 };
@@ -82,6 +86,7 @@ setInterval(Sec5, 500);
 const Sec6 = () => {
   if (six.classList.contains("swiper-slide-active")) {
     logo.classList.add("whiteO");
+    logo.classList.remove("blackO");
     logo.style.opacity = "1";
     logo.style.transition = "all 0.9s linear";
   }
@@ -92,7 +97,7 @@ setInterval(Sec6, 500);
 const Sec7 = () => {
   if (seven.classList.contains("swiper-slide-active")) {
     logo.classList.remove("whiteO");
-    logo.style.fill = "#000";
+    logo.classList.add("blackO");
     logo.style.opacity = "1";
     logo.style.transition = "all 0.9s linear";
   }
@@ -103,7 +108,7 @@ setInterval(Sec7, 500);
 const Sec8 = () => {
   if (eight.classList.contains("swiper-slide-active")) {
     logo.classList.remove("whiteO");
-    logo.style.fill = "#000";
+    logo.classList.add("blackO");
     logo.style.opacity = "1";
     logo.style.transition = "all 0.9s linear";
   }
