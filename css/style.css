@@ -99,7 +99,7 @@ div.header svg:focus {
 .slideOut {
     width: 27em !important;
     transform: translateY(50px);
-    transition: all 0.2s linear !important;
+    transition: all 0.1s linear !important;
 }
 
 .mobile div.header svg {
